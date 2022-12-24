@@ -1,5 +1,3 @@
-import java.lang.reflect.Array;
-
 public class Store {
 
     private Movie[] movies = new Movie[10];
