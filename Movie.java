@@ -10,9 +10,9 @@ public class Movie {
     }
 
     public Movie (Movie source) {
-        source.name = name;
-        source.format = format;
-        source.rating = rating;
+        this.name = source.name;
+        this.format = source.format;
+        this.rating = source.rating;
     }
 
     public String getName() {
