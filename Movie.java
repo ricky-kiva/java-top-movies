@@ -15,6 +15,30 @@ public class Movie {
         source.rating = rating;
     }
 
+    public String getName() {
+        return this.name;
+    }
+
+    public String getFormat() {
+        return this.format;
+    }
+
+    public double getRating() {
+        return this.rating;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setFormat(String format) {
+        this.format = format;
+    }
+
+    public void setRating(double rating) {
+        this.rating = rating;
+    }
+
     @Override
     public String toString() {
         return this.rating + "\t" + this.format + "\t\t" + this.name;
