@@ -1,11 +1,21 @@
+import java.lang.reflect.Array;
+
 public class Store {
 
     private Movie[] movies = new Movie[10];
 
     public Store(Movie[] movies) {
-        for (int i = 0; i < movies.length; i++) {
-            this.movies[i] = new Movie(movies[i]);
+        for (int i = 0; i < this.movies.length; i++) {
+            try {
+                this.movies[i] = new Movie(movies[i]);
+            } catch (ArrayIndexOutOfBoundsException e) {
+                this.movies[i] = new Movie("-", "-", 0.0);
+            }
         }
+    }
+
+    public int getStoreLength() {
+        return this.movies.length;
     }
 
     public Movie getMovie(int index) {
